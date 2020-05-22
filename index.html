@@ -13,6 +13,21 @@
     <h3>Tukej mal probavamo</h3>
     <h4>Tukej mal probavamo</h4>
 
+    <div>
+        <div><input placeholder="Ime" type="text" class="ime"></div>
+        <div><input placeholder="prezime" type="text" class="priimek"></div>
+        <div><label>Yes<input placeholder="stevilke" type="radio" name="burek"></label>
+            <label>No<input placeholder="stevilke" type="radio" name="burek"></label></div>
+    </div>
+
+    <div>
+        <button class="btn" style="color: coral; background-color: cornsilk; border: 0px;">
+            Klik mi
+        </button>
+    </div>
+
+    <div class="result"></div>
+
     <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
         standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
@@ -59,7 +74,7 @@
         <a href="https://sl.wikipedia.org/wiki/Finska" target="_blank">burek</a>
     </p>
 
-    <img src="IMG_2167.jpg" style="border:10px solid blue;" >
+    <img src="IMG_2167.jpg" style="border:10px solid blue;">
 
     <ol>
         <li>Kisu
@@ -109,5 +124,14 @@
         </tr>
     </table>
 
+
+    <script>
+        document.querySelector('.btn').addEventListener('click', event => {
+            const ime = document.querySelector('.ime').value
+            const priimek = document.querySelector('.priimek').value
+            document.querySelector('.result').innerHTML = ime + ' ' + priimek
+        })
+    </script>
 </body>
+
 </html>
